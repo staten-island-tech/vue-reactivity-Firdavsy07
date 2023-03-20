@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <template></template>
 <script></script>
 <style></style>
 =======
+=======
+>>>>>>> parent of f7af3cd (sure)
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
@@ -88,4 +91,7 @@ nav a:first-of-type {
   }
 }
 </style>
+<<<<<<< HEAD
+>>>>>>> parent of f7af3cd (sure)
+=======
 >>>>>>> parent of f7af3cd (sure)
