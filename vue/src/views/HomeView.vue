@@ -1,8 +1,9 @@
 <script>
 import { character } from '../array'
+import MyCard from './MyCard.vue'
 export default {
   name: 'HomeView',
-  components: {},
+  components: { MyCard },
   data() {
     return {
       models: character
@@ -18,11 +19,24 @@ export default {
 
 <style scoped>
 .main {
+  background-color: red;
+  border: solid 1px;
+  border-color: black;
+  margin: 5px;
+  height: 200px;
+  width: 300px;
 }
 </style>
 
 <template>
-  <div class="main">
-    <h1 v-for="model in models" :key="model">{{ model }}</h1>
-  </div>
+  <MyCard
+    v-for="model in models"
+    :key="model.name"
+    :title="model.name"
+    :threat="model.threat"
+    :image1="model.dataSheetFront"
+    :image2="model.dataSheetBack"
+    :affiliation="model.faction"
+    class="main"
+  ></MyCard>
 </template>
