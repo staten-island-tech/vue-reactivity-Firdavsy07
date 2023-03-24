@@ -17,8 +17,8 @@ const character = [
     name: 'Doctor Strange',
     threat: 5,
     faction: ['Convocation', 'Defenders', 'Midnight Sons'],
-    dataSheetFront: '../public/DoctorStrange1.png',
-    dataSheetBack: '../public/DoctorStrange2.png'
+    dataSheetFront: '../public/DoctorStrange1.jpg',
+    dataSheetBack: '../public/DoctorStrange2.jpg'
   },
   {
     name: 'Iron Man',
