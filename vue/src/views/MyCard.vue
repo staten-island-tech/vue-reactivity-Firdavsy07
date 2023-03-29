@@ -5,6 +5,8 @@
     <p>{{ affiliation }}</p>
     <img class="image" :src="getImage1" />
     <img class="image" :src="getImage2" />
+    <button v-on:click="Selection" v-if="Selected">Chosen</button>
+    <button v-on:click="Selection" v-else>Not Included</button>
   </div>
 </template>
 
@@ -18,12 +20,26 @@
 <script>
 export default {
   name: 'MyCard',
+  data() {
+    return {
+      Selected: false
+    }
+  },
   props: {
     title: String,
     threat: Number,
     image1: String,
     image2: String,
     affiliation: Array
+  },
+  methods: {
+    Selection: function () {
+      if (this.Selected === false) {
+        this.Selected = true
+      } else {
+        this.Selected = false
+      }
+    }
   },
   computed: {
     getImage1: function () {
