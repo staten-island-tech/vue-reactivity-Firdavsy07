@@ -23,7 +23,7 @@ export default {
     threat: Number,
     image1: String,
     image2: String,
-    affiliation: String
+    affiliation: Array
   },
   computed: {
     getImage1: function () {

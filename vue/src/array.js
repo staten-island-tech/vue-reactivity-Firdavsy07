@@ -39,5 +39,5 @@ const character = [
       'https://s3-us-west-2.amazonaws.com/assets.acrossthebifrost.com/042/1/magneto_injured.jpg'
   }
 ]
-
+console.log(character)
 export { character }
