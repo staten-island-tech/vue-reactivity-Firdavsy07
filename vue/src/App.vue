@@ -6,8 +6,8 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
     <div class="wrapper">
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about">The Gist</RouterLink>
+        <RouterLink to="/">Fulfill your nerd fantasy</RouterLink>
       </nav>
     </div>
   </header>
@@ -33,14 +33,6 @@ nav {
   margin-top: 2rem;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
 nav a {
   display: inline-block;
   padding: 0 1rem;
@@ -58,14 +50,8 @@ nav a:first-of-type {
     padding-right: calc(var(--section-gap) / 2);
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
   header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    background-color: grey;
   }
 
   nav {
