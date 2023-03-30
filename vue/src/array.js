@@ -1,3 +1,4 @@
+const characterList = []
 const character = [
   {
     name: 'Agent Venom',
@@ -41,3 +42,4 @@ const character = [
 ]
 console.log(character)
 export { character }
+export { characterList }
