@@ -5,8 +5,8 @@
     <p>{{ affiliation }}</p>
     <img class="image" :src="getImage1" />
     <img class="image" :src="getImage2" />
-    <button v-on:click="Selection" @click="Acquire" v-if="Selected">Chosen</button>
-    <button v-on:click="Selection" v-else>Not Included</button>
+    <button v-on:click="Selection" @click="Remove({ title })" v-if="Selected">Chosen</button>
+    <button v-on:click="Selection" @click="Acquire()" v-else>Not Included</button>
   </div>
 </template>
 
@@ -18,7 +18,6 @@
 </style>
 
 <script>
-import { character } from '../array'
 import { roster } from '../array'
 export default {
   name: 'MyCard',
@@ -32,12 +31,21 @@ export default {
     threat: Number,
     image1: String,
     image2: String,
-    affiliation: Array
+    affiliation: Array,
+    id: Number
   },
   methods: {
-    Acquire: function (id) {
-      const find = character.find((character) => character.id === id)
-      roster.push(find)
+    Acquire: function () {
+      roster.push({
+        name: this.title,
+        cost: this.threat
+      })
+      console.log(roster)
+    },
+    Remove: function () {
+      let remove = roster.find((roster) => roster.name === this.title)
+      console.log(remove)
+      roster.splice(remove, 1)
       console.log(roster)
     },
     Selection: function () {
