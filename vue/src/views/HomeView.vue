@@ -1,4 +1,5 @@
 <script>
+import { roster } from '../array'
 import { character } from '../array'
 import MyCard from './MyCard.vue'
 export default {
@@ -6,7 +7,8 @@ export default {
   components: { MyCard },
   data() {
     return {
-      models: character
+      models: character,
+      roster: roster
     }
   },
   methods: {
@@ -39,4 +41,7 @@ export default {
     :affiliation="model.faction"
     class="main"
   ></MyCard>
+  <div class="model">
+    <p>{{ roster }}</p>
+  </div>
 </template>
