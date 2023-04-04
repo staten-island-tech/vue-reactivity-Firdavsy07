@@ -5,7 +5,7 @@
     <p>{{ affiliation }}</p>
     <img class="image" :src="getImage1" />
     <img class="image" :src="getImage2" />
-    <button v-on:click="Selection" @click="Remove({ title })" v-if="Selected">Chosen</button>
+    <button v-on:click="Selection" @click="Remove()" v-if="Selected">Chosen</button>
     <button v-on:click="Selection" @click="Acquire()" v-else>Not Included</button>
   </div>
 </template>
@@ -32,7 +32,8 @@ export default {
     image1: String,
     image2: String,
     affiliation: Array,
-    id: Number
+    id: Number,
+    display: String
   },
   methods: {
     Acquire: function () {
@@ -41,19 +42,19 @@ export default {
         cost: this.threat
       })
       console.log(roster)
-    },
-    Remove: function () {
-      let remove = roster.indexOf(roster.find((roster) => roster.name === this.title))
-      console.log(remove)
-      roster.splice(remove, 1)
-      console.log(roster)
-    },
-    Selection: function () {
-      if (this.Selected === false) {
-        this.Selected = true
-      } else {
-        this.Selected = false
-      }
+    }
+  },
+  Remove: function () {
+    let remove = roster.indexOf(roster.find((roster) => roster.name === this.title))
+    console.log(remove)
+    roster.splice(remove, 1)
+    console.log(roster)
+  },
+  Selection: function () {
+    if (this.Selected === false) {
+      this.Selected = true
+    } else {
+      this.Selected = false
     }
   },
   computed: {

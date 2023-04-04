@@ -8,7 +8,7 @@ export default {
   data() {
     return {
       models: character,
-      roster: roster
+      rosters: roster
     }
   },
   methods: {
@@ -42,6 +42,6 @@ export default {
     class="main"
   ></MyCard>
   <div class="model">
-    <p>{{ roster }}</p>
+    <p>Shopping Cart</p>
   </div>
 </template>
