@@ -43,7 +43,7 @@ export default {
       console.log(roster)
     },
     Remove: function () {
-      let remove = roster.find((roster) => roster.name === this.title)
+      let remove = roster.indexOf(roster.find((roster) => roster.name === this.title))
       console.log(remove)
       roster.splice(remove, 1)
       console.log(roster)
