@@ -1,3 +1,5 @@
+import { reactive } from 'vue'
+
 const characterList = []
 const character = [
   {
@@ -45,7 +47,7 @@ const character = [
     id: 4
   }
 ]
-const roster = []
+const roster = reactive([])
 console.log(character)
 
 export { roster }
